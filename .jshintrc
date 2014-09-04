@@ -1,0 +1,11 @@
+{
+  // Enforcing options
+  "indent": false,
+  "quotmark": "single",
+  "strict": false,
+
+  // Relaxing options
+  "evil": true,
+  "lastsemic": true,
+  "laxbreak": true
+}
