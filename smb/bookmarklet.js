@@ -1,0 +1,1 @@
+javascript:void(function(t){/^\\\\/.test(t)&&alert("smb:"+t.replace(/\\/g,"/"))}(prompt("file path")))

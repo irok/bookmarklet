@@ -17,5 +17,6 @@ function makeTask(taskname, filename) {
 makeTask('co-meeting', 'fullscreen.js');
 makeTask('booklog', 'amazon.js');
 makeTask('librize', 'amazon.js');
+makeTask('smb', 'index.js');
 makeTask('twitter', 'tweet.js');
 
