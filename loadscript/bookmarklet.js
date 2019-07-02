@@ -1,0 +1,1 @@
+javascript:void(function(){var e=document.createElement("script");e.src="http://st-www.gmo.media/js/isbn/index.js?t="+Date.now(),e.async=!0;var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}())
