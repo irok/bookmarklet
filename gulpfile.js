@@ -1,22 +1,22 @@
-var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')();
+const {task, src, dest, parallel} = require('gulp');
+const glob = require('glob');
+const rename = require('gulp-rename');
+const replace = require('gulp-replace');
+const uglify = require('gulp-uglify');
 
 // create task
-function makeTask(taskname, filename) {
-    gulp.task(taskname, function() {
-        return gulp.src(taskname + '/' + filename)
-            .pipe($.jshint())
-            .pipe($.jshint.reporter('jshint-stylish'))
-            .pipe($.uglify())
-            .pipe($.replace(/^!(.+);$/, 'javascript:void($1)'))
-            .pipe($.rename({basename: 'bookmarklet'}))
-            .pipe(gulp.dest(taskname));
-    });
+function createTask(name) {
+  const task = () => src(`./${name}/src.js`)
+    .pipe(uglify())
+    .pipe(replace(/^!(.+);$/, 'javascript:void($1)'))
+    .pipe(rename({basename: 'bookmarklet'}))
+    .pipe(dest(name));
+  task.displayName = name;
+  return task;
 }
 
-makeTask('co-meeting', 'fullscreen.js');
-makeTask('booklog', 'amazon.js');
-makeTask('librize', 'amazon.js');
-makeTask('smb', 'index.js');
-makeTask('twitter', 'tweet.js');
+const targets = glob.sync('./*/src.js')
+  .map(filepath => filepath.split('/')[1]);
 
+targets.map(createTask).map(task);
+task('default', parallel(targets));
