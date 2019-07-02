@@ -1,6 +1,6 @@
 (function(id, matches) {
     if (matches) {
-        open('http://booklog.jp/users/'+id+'?keyword='+matches[1]+matches[2], '_blank');
+        open('https://booklog.jp/users/'+id+'?keyword='+matches[1]+matches[2], '_blank');
     } else {
         alert('ISBN not found');
     }
