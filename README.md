@@ -1,8 +1,8 @@
 # 自分用のbookmarkletを生成する
 
-## loadscript/bookmarklet.js
+## isbn_checker/bookmarklet.js
 
-src.jsで指定したスクリプトをロードする
+会社の書籍購入済みスクリプトをロードする
 
 ## smb/bookmarklet.js
 
