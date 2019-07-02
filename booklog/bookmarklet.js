@@ -1,1 +1,0 @@
-javascript:void(function(o,n){n?open("https://booklog.jp/users/gmobooks?keyword="+n[1]+n[2],"_blank"):alert("ISBN not found")}(0,document.body.innerHTML.match(/<li><b>ISBN-13:<\/b> (\w+)-(\w+)<\/li>/)))
