@@ -4,4 +4,4 @@
   script.async = true;
   var entry = document.getElementsByTagName('script')[0];
   entry.parentNode.insertBefore(script, entry);
-})('https://st-www.gmo.media/js/isbn/index.js');
+})('https://www.gmo.media/js/isbn/index.js');
